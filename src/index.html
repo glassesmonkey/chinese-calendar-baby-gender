@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My TailwindCSS Project</title>
+  <link href="../dist/styles.css" rel="stylesheet">
+</head>
+<body>
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/ROx38OQv3gu
+-->
+
+<div class="flex flex-col min-h-screen">
+  <header class="bg-[#FF6B6B] py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <a class="text-white font-bold text-2xl" href="#">
+        中国传统生男生女工具
+      </a>
+      <nav class="flex gap-4">
+        <a class="text-white hover:underline" href="#">
+          其他工具
+        </a>
+        <a class="text-white hover:underline" href="#">
+          关于
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div class="flex-1 flex items-center justify-center bg-gradient-to-r from-[#FFF7EB] to-[#FFF0F0] py-12">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+      <h1 class="text-3xl font-bold mb-6 text-center text-[#FF6B6B]">中国传统生男生女工具</h1>
+      <div class="grid gap-4">
+        <div class="grid gap-2">
+          <label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#FF6B6B]"
+            for="birthday"
+          >
+            母亲生日
+          </label>
+          <input
+            class="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-[#FF6B6B] focus:ring-[#FF6B6B]"
+            id="birthday"
+            type="date"
+            value=""
+          />
+        </div>
+        <div class="grid gap-2">
+          <label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#FF6B6B]"
+            for="pregnancyTime"
+          >
+            怀孕时间
+          </label>
+          <input
+            class="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-[#FF6B6B] focus:ring-[#FF6B6B]"
+            id="pregnancyTime"
+            type="date"
+            value=""
+          />
+        </div>
+        <button class="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[#FF6B6B] hover:bg-[#E53E3E] text-white font-bold py-2 px-4 rounded">
+          计算
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
