@@ -73,13 +73,30 @@ document.getElementById('calculateButton').addEventListener('click', function() 
     const motherAge = getAge(motherBirthday);
     if (motherAge < 18 || motherAge > 45) {
         console.log(`mother age Invalid`);
-        document.getElementById('message').innerText = 'Age must be between 18 and 45.';
+        document.getElementById('message').innerText = 'Mother\'s Age must be between 18 and 45.';
         return;
     }
     const pregnancyMonth = convertToLunarMonth(pregnancyTime);
 
     const gender = calculateChildGender(motherAge, pregnancyMonth);
-    document.getElementById('message').innerText = `Predicted Gender: ${gender}`;
+    if (gender === 'girl') {
+        document.getElementById('message').innerHTML = '<span class="text-2xl font-bold">It\'s a Girl!</span><br>Congratulations! According to the legendary Chinese gender chart, you\'re having a girl.';
+      } else if (gender === 'boy') {
+        document.getElementById('message').innerHTML = '<span class="text-2xl font-bold">It\'s a Boy!</span><br>Congratulations! According to the legendary Chinese gender chart, you\'re having a boy.';
+      } else {
+        document.getElementById('message').innerHTML = 'Data not available for this month';
+      }
     // 显示结果，例如在控制台打印或更新页面元素
-    console.log(`Predicted Gender: ${gender}`); // 可以替换为页面上的输出方式
+    console.log(`It's a ${gender}!`); // 可以替换为页面上的输出方式
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const today = new Date();
+    const maxYear = today.getFullYear() - 18;
+    const minYear = today.getFullYear() - 45;
+  
+    const birthdayInput = document.getElementById('birthday');
+    birthdayInput.max = `${maxYear}-12-31`;
+    birthdayInput.min = `${minYear}-01-01`;
+  });
+  
